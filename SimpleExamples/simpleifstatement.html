@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    What is the password?
+    <input type="text" id="my-input">
+    <button type="button" id="my-button">Submit</button>
+
+    <script>
+      document.getElementById('my-button').onclick = function() {
+        if (document.getElementById('my-input').value == "coding") {
+          alert("You got it!");
+        } else {
+          alert("That's not right, try again!");
+        }
+      }
+    </script>
+  </body>
+</html>
