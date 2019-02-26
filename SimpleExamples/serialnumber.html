@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
 </head>
+
 <body>
 
     <div id="mySerial"></div>
@@ -15,11 +23,11 @@
     <script>
         function generateSerialNumber() {
             let rand1 = [...Array(16)].map(() => {
-            // getting an array of 16 random characters, turning it into string
-            // random characters from this pool "0123456789abcdefghijklmnopqrstuvwxyz"
-            // remove first two characters and then start from the first immediately 
-            return Math.random().toString(36).substr(2, 1);
-        });
+                // getting an array of 16 random characters, turning it into string
+                // random characters from this pool "0123456789abcdefghijklmnopqrstuvwxyz"
+                // remove first two characters and then start from the first immediately 
+                return Math.random().toString(36).substr(2, 1);
+            });
             // joins the array elements together and changes them to uppercase
             const randStr = rand1.join("").toUpperCase();
             // 4 characters
@@ -38,4 +46,5 @@
         document.getElementById('mySerial').innerHTML = generateSerialNumber();
     </script>
 </body>
+
 </html>
