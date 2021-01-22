@@ -1,3 +1,5 @@
+// calculate average of array elements
+
 function average(array) {
     const result = array.reduce((acc, sum) => {
       return acc + sum;
